@@ -14,7 +14,7 @@ import Header from '../parts/header';
 import Footer from '../parts/footer';
 
 
-export default function Article({title,rows,links}) {
+export default function Article({title,rows}) {
     
     return (
 
@@ -36,7 +36,11 @@ export default function Article({title,rows,links}) {
 
                         if(r.func === 'p'){
 
-                            return <p className="my-2" key={indx}>{r.body}</p>
+                            return <p className="my-2" key={indx}>{r.payload}</p>
+                        }
+                        else if(r.func === 'link'){
+
+                            return <div key={`dv${indx}`} className="my-2 text-slate-500 hover:text-blue-500"><a href={r.payload} target="_blank" rel="noreferrer" key={indx}>{r.payload}</a></div>
                         }
                         else{
 
@@ -44,15 +48,6 @@ export default function Article({title,rows,links}) {
                         }
                     })
                     
-                }</div>
-
-                <div className="my-6 px-6">{
-
-                    links.map((k,indx)=>{
-
-                        return <div key={`dv${indx}`} className="my-2 text-slate-500 hover:text-blue-500"><a href={k} target="_blank" rel="noreferrer" key={indx}>{k}</a></div>
-                    })
-
                 }</div>
 
             </main>
@@ -116,11 +111,10 @@ export async function getServerSideProps({ params }) {
         query ArticleData($slug: String!) {
             sluget(slug: $slug) {
               title
-              rows{
+              rows {
                 func
-                body
+                payload
               }
-              links
               
             }
         }
@@ -135,7 +129,6 @@ export async function getServerSideProps({ params }) {
                 
                 title:data?.sluget.title || 'No title',
                 rows:data?.sluget.rows,
-                links:data?.sluget.links,
                 
             },
         

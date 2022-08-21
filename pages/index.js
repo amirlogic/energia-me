@@ -22,7 +22,7 @@ export default function Home({list}) {
 
       <Head>
 
-        <title>Functional Biology</title>
+        <title>Amir Hachaichi</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="description" content="Functional biology by SynergyLaunch" />
         <link rel="icon" href="/favicon.ico" />
@@ -34,12 +34,12 @@ export default function Home({list}) {
       <main className="container mx-auto min-h-screen mt-6 text-lg">
 
         <h1 className="my-4 text-2xl text-center text-blue-500">
-          Welcome to FunBio!
+          Welcome to my website!
         </h1>
 
         <div className="py-8 text-slate-600">
 
-          <p>Articles that you can read in few minutes about recent developments in genomics, molecular biology, bioinformatics and healthtech</p>
+          <p>---</p>
 
         </div>
 

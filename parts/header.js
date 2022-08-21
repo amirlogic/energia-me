@@ -7,7 +7,7 @@ export default function Header() {
 
                 <div className="h-14 text-xl text-stone-600 md:flex-none md:w-3/5">
                     
-                    Functional Biology
+                    Amir's Homepage
                     
                 </div>
 
