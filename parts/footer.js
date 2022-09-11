@@ -2,7 +2,7 @@
 export default function Footer() {
 
     return (
-      <footer className="container mx-auto">
+      <footer className="container mx-auto text-slate-500">
         
           <div className="py-28 text-center">
             
