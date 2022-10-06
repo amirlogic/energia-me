@@ -9,8 +9,8 @@ import { onError } from "@apollo/client/link/error";
 import md from 'markdown-it';
 
 import Head from 'next/head';
-
 import Script from 'next/script';
+import Link from 'next/link';
 
 import Header from '../parts/header';
 import Footer from '../parts/footer';
@@ -38,7 +38,7 @@ export default function Article({title,rows}) {
 
                         if(r.func === 'p'){
 
-                            return <p dangerouslySetInnerHTML={{ __html: md().render(r.payload) }} className="my-2" key={indx} /> 
+                            return <div className="my-2" key={indx} dangerouslySetInnerHTML={{ __html: md().render(r.payload) }}></div> 
                         }
                         else if(r.func === 'link'){
 
@@ -55,6 +55,8 @@ export default function Article({title,rows}) {
                     })
                     
                 }</div>
+
+                <div className="px-6 mx-auto md:w-2/3"><Link href="/"><a>back to homepage</a></Link></div>
 
             </main>
 
