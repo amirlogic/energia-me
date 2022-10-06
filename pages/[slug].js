@@ -6,6 +6,8 @@ import { RetryLink } from "@apollo/client/link/retry";
 
 import { onError } from "@apollo/client/link/error";
 
+import md from 'markdown-it';
+
 import Head from 'next/head';
 
 import Script from 'next/script';
@@ -28,19 +30,23 @@ export default function Article({title,rows}) {
 
             <main className="container mx-auto min-h-screen mt-2">
 
-                <div className="text-lg font-semibold">{title} </div>
+                <div className="px-6 md:w-2/3 mx-auto text-lg font-semibold">{title} </div>
 
-                <div className="my-8 px-6 font-serif">{
+                <div className="my-8 mx-auto px-6 font-serif w-full md:w-2/3">{
                     
                     rows.map((r,indx)=>{
 
                         if(r.func === 'p'){
 
-                            return <p className="my-2" key={indx}>{r.payload}</p>
+                            return <p dangerouslySetInnerHTML={{ __html: md().render(r.payload) }} className="my-2" key={indx} /> 
                         }
                         else if(r.func === 'link'){
 
                             return <div key={`dv${indx}`} className="my-2 text-slate-500 hover:text-blue-500"><a href={r.payload} target="_blank" rel="noreferrer" key={indx}>{r.payload}</a></div>
+                        }
+                        else if(r.func === 'code'){
+
+                            return <code key={`dv${indx}`} className="my-2">{r.payload}</code>
                         }
                         else{
 
