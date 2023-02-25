@@ -37,13 +37,13 @@ export default function Home({list}) {
           Welcome to my website!
         </h1>
 
-        <div className="py-8 text-slate-600">
+        <div className="py-16 text-slate-600">
 
           <div className="mx-auto md:w-3/5 md:flex">
 
-            <div className="">My name is Amir, and this is my blog</div>
+            <div className="px-8">My name is Amir, and this is my blog</div>
 
-            <div className="">You can also find me on these platforms:</div>
+            <div className="px-8">You can also find me on these platforms:</div>
 
 
           </div>
