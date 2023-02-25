@@ -39,17 +39,24 @@ export default function Home({list}) {
 
         <div className="py-8 text-slate-600">
 
-          <p>---</p>
+          <div className="mx-auto md:w-3/5 md:flex">
+
+            <div className="">My name is Amir, and this is my blog</div>
+
+            <div className="">You can also find me on these platforms:</div>
+
+
+          </div>
 
         </div>
 
         <div className="container" id="articles">
 
-          <div className="mx-auto md:w-2/3">
+          <div className="mx-auto md:w-1/2">
           {
             list.map((r,indx)=>{
 
-              return <div key={`dv${indx}`} className="py-1 text-lg"><a href={r.slug} key={indx}>{r.title}</a></div>
+              return <div key={`dv${indx}`} className="py-1 text-lg hover:text-blue-700"><a href={r.slug} key={indx}>{r.title}</a></div>
 
             })
           }
