@@ -1,8 +1,10 @@
 
+
+
 export default function Footer() {
 
     return (
-      <footer className="container mx-auto text-slate-500">
+      <footer className="py-28 min-h-32 bg-gray-200 mx-auto text-slate-500">
         
           <div className="py-28 text-center">
             
