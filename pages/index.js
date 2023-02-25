@@ -18,7 +18,7 @@ export default function Home({list}) {
 
   return (
 
-    <div className={styles.container}>
+    <>
 
       <Head>
 
@@ -31,7 +31,7 @@ export default function Home({list}) {
 
       <Header />
 
-      <main className="container mx-auto min-h-screen mt-6 text-lg">
+      <main className="w-full mx-auto min-h-screen mt-6 text-lg">
 
         <h1 className="my-4 text-2xl text-center text-blue-500">
           Welcome to my website!
@@ -43,7 +43,7 @@ export default function Home({list}) {
 
         </div>
 
-        <div id="articles">
+        <div className="container" id="articles">
           {
             list.map((r,indx)=>{
 
@@ -65,7 +65,7 @@ export default function Home({list}) {
 
       <Script id="statcounter-js" strategy="lazyOnload" src="https://www.statcounter.com/counter/counter.js" />
 
-    </div>
+    </>
   )
 }
 
