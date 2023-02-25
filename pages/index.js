@@ -12,7 +12,7 @@ import Script from 'next/script';
 import Header from '../parts/header';
 import Footer from '../parts/footer';
 
-import styles from '../styles/Home.module.css'
+
 
 export default function Home({list}) {
 
@@ -44,13 +44,17 @@ export default function Home({list}) {
         </div>
 
         <div className="container" id="articles">
+
+          <div className="mx-auto md:w-2/3">
           {
             list.map((r,indx)=>{
 
-              return <div key={`dv${indx}`} className="py-1"><a href={r.slug} key={indx}>{r.title}</a></div>
+              return <div key={`dv${indx}`} className="py-1 text-lg"><a href={r.slug} key={indx}>{r.title}</a></div>
 
             })
           }
+          </div>
+
         </div>
 
       </main>
