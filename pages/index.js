@@ -8,6 +8,7 @@ import { onError } from "@apollo/client/link/error";
 
 import Head from 'next/head';
 import Script from 'next/script';
+import Link from 'next/link';
 
 import Header from '../parts/header';
 import Footer from '../parts/footer';
@@ -33,17 +34,21 @@ export default function Home({list}) {
 
       <main className="w-full mx-auto min-h-screen mt-6 text-lg">
 
-        <h1 className="my-4 text-2xl text-center text-blue-500">
+        {/* <h1 className="my-4 text-2xl text-center text-blue-500">
           Welcome to my website!
-        </h1>
+        </h1> */}
 
-        <div className="py-24 px-8">
+        <div className="py-24 px-8 my-4 bg-slate-100">
 
           <div className="mx-auto md:w-3/5 md:flex text-slate-600">
 
-            <div className="p-8">My name is Amir, and this is my blog</div>
+            <div className="p-8">My name is Amir, and this is my blog<br />
+            In this blog, I write about business and medical<br />
+            
+            </div>
 
-            <div className="p-8">You can also find me on these platforms:</div>
+            <div className="p-8">You can also find me on these platforms:<br />
+            </div>
 
 
           </div>

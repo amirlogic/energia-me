@@ -4,7 +4,7 @@
 export default function Footer() {
 
     return (
-      <footer className="w-full py-28 min-h-32 bg-gray-200 mx-auto text-slate-500">
+      <footer className="w-full py-28 mt-6 min-h-32 bg-gray-200 mx-auto text-slate-500">
         
           <div className="text-center">
             
