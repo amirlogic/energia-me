@@ -48,9 +48,22 @@ export default function Home({list}) {
 
             </div>
 
-            <div className="p-8">You can also find me on these platforms:<br />
-            <Image alt="github" src="/github.svg" width="20" height="20"></Image>
-            <Image alt="twitter" src="/twitter.svg" width="20" height="20"></Image>
+            <div className="p-8">
+
+              <div className="p-2">You can also find me on these platforms:</div>
+
+              <div className="p-2">
+                <Link href="https://github.com/amirlogic" >
+                  <a target="_blank" className="mx-2"><Image alt="github" src="/github.svg" width="40" height="40"></Image></a>
+                </Link>
+                <Link href="https://twitter.com/eamiro">
+                  <a target="_blank" className="mx-2"><Image alt="twitter" src="/twitter.svg" width="40" height="40"></Image></a>
+                </Link>
+                <Link href="https://www.linkedin.com/in/amirhac/">
+                  <a target="_blank" className="mx-2"><Image alt="linkedin" src="/linkedin.svg" width="40" height="40"></Image></a>
+                </Link>
+              </div>
+              
             </div>
 
 
