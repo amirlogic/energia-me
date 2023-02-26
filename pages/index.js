@@ -35,17 +35,13 @@ export default function Home({list}) {
 
       <main className="w-full mx-auto min-h-screen mt-6 text-lg">
 
-        {/* <h1 className="my-4 text-2xl text-center text-blue-500">
-          Welcome to my website!
-        </h1> */}
-
         <div className="py-12 px-8 my-4 bg-slate-100 md:py-24">
 
           <div className="mx-auto md:w-3/5 md:flex text-slate-600">
 
             <div className="">
 
-              <div className="px-8 py-2">My name is Amir, and this is my blog</div>
+              <div className="px-8 py-2">Welcome to my homepage! My name is Amir</div>
 
               <div className="px-8 py-2">In this blog, I write about business and medical</div>
 
