@@ -43,24 +43,30 @@ export default function Home({list}) {
 
           <div className="mx-auto md:w-3/5 md:flex text-slate-600">
 
-            <div className="p-8">My name is Amir, and this is my blog<br />
-            In this blog, I write about business and medical<br />
+            <div className="">
+
+              <div className="px-8 py-2">My name is Amir, and this is my blog</div>
+
+              <div className="px-8 py-2">In this blog, I write about business and medical</div>
 
             </div>
 
-            <div className="p-8">
+            <div className="">
 
-              <div className="p-2">You can also find me on these platforms:</div>
+              <div className="px-8 py-2">I also write about Javascript and Web Development on 
+              <Link href="https://amir-hac.medium.com/"><a target="_blank" rel="noopener noreferrer" className="mx-2">Medium</a></Link></div>
 
-              <div className="p-2">
+              <div className="px-8 py-2">You can also find me on these platforms:</div>
+
+              <div className="px-8 py-2">
                 <Link href="https://github.com/amirlogic">
-                  <a target="_blank" rel="noopener noreferrer" className="mx-2"><Image alt="github" src="/github.svg" width="40" height="40"></Image></a>
+                  <a target="_blank" rel="noopener noreferrer" className="mx-2"><Image alt="github" src="/github.svg" title="GitHub" width="40" height="40"></Image></a>
                 </Link>
                 <Link href="https://twitter.com/eamiro">
-                  <a target="_blank" rel="noopener noreferrer" className="mx-2"><Image alt="twitter" src="/twitter.svg" width="40" height="40"></Image></a>
+                  <a target="_blank" rel="noopener noreferrer" className="mx-2"><Image alt="twitter" src="/twitter.svg" title="Twitter" width="40" height="40"></Image></a>
                 </Link>
                 <Link href="https://www.linkedin.com/in/amirhac/">
-                  <a target="_blank" rel="noopener noreferrer" className="mx-2"><Image alt="linkedin" src="/linkedin.svg" width="40" height="40"></Image></a>
+                  <a target="_blank" rel="noopener noreferrer" className="mx-2"><Image alt="linkedin" src="/linkedin.svg" title="LinkedIn" width="40" height="40"></Image></a>
                 </Link>
               </div>
               
@@ -77,7 +83,7 @@ export default function Home({list}) {
           {
             list.map((r,indx)=>{
 
-              return <div key={`dv${indx}`} className="py-1 text-lg hover:text-blue-700"><a href={r.slug} key={indx}>{r.title}</a></div>
+              return <div key={`dv${indx}`} className="py-1 text-lg hover:text-blue-700"><Link href={r.slug} key={indx}><a>{r.title}</a></Link></div>
 
             })
           }
